@@ -18,6 +18,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
+    background: var(--clr-bg);
 }
 
 h1,
@@ -109,7 +110,7 @@ header {
 }
 
 .link-item:hover {
-    transition:.3s ease-in;
+    transition: .3s ease-in;
     color: var(--action02);
 }
 
@@ -177,9 +178,9 @@ small span {
     border-radius: 1px;
     padding: 3px;
     margin-top: 20px;
-    transition: 
-    transform 250ms ease-in,
-    opacity 250ms linear;
+    transition:
+        transform 250ms ease-in,
+        opacity 250ms linear;
 }
 
 .cta-reg:hover,
@@ -238,7 +239,7 @@ small span {
     transition: .3s linear;
 }
 
-.icon > i {
+.icon>i {
     margin: 20px;
     transform: rotate(-50deg);
 }
@@ -252,7 +253,7 @@ small span {
 .service-item p {
     font-size: 16px;
     letter-spacing: 1px;
-    text-align:inherit;
+    text-align: inherit;
     color: var(--clr-text);
 }
 
@@ -264,22 +265,81 @@ small span {
 /*Our Service Content Ends*/
 
 
+/*Registration Content Starts*/
+.reg-txt {
+    display: flex;
+    align-items: center;
+}
+
+.reg-txt p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.reg-txt p i {
+    position: absolute;
+    left: 23%;
+}
+
+.item-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16.75rem, 1fr));
+}
+
+.img-bg {
+    position: relative;
+    background: url(../img/form.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    height: 350px;
+    padding: 0 100px;
+    transition: opacity 250ms,
+    transform 250ms ease-in;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub-title {
+    font-weight: 600;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.img-bg:hover,
+.img-bg:focus {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*Registration Content Ends*/
+
+
 /* Media Starts*/
 @media (max-width: 48em) {
     .nav-container {
         max-width: 90%;
         height: 6vh;
     }
-    
+
 
     .link-item.active,
-    .link-item:hover {
+    .link-item.active-ab,
+    .link-item.active-cp,
+    .link-item.active-os .link-item:hover {
         color: var(--action02);
         background: none;
     }
 }
 
-@media (max-width: 37.5em) { 
+@media (max-width: 37.5em) {
     .hamburger {
         display: block;
     }
@@ -296,7 +356,7 @@ small span {
         transition: all .4s;
         z-index: 100;
     }
-    
+
     .link-item {
         line-height: 8.75rem;
         font-size: 24px;
@@ -308,9 +368,10 @@ small span {
         background: none;
     }
 
-    #toggle-btn:checked ~ .links {
+    #toggle-btn:checked~.links {
         right: 0;
     }
 
 }
+
 /* Media Ends*/
