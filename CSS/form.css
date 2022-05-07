@@ -1,0 +1,46 @@
+:root {
+    --clr-text: white;
+    --clr-text02: #948845;
+    --clr-bg02: #3b330b;
+    --clr-bg: #262626;
+    --action: #e2bb0a;
+    --action02: #af920f;
+    --accent: #027b75;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--clr-text);
+    background: var(--clr-bg);
+}
+
+h2,
+h3,
+p,
+small {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fuild {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 35%;
+}
+
+.container {
+    width: 90%;
+    max-width: 65em;
+    margin: 40px auto;
+}
